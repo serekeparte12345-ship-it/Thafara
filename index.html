@@ -6,6 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Thafara menyediakan kain kafan lengkap, perlengkapan jenazah siap pakai sesuai syariat Islam.">
+<meta name="keywords" content="kain kafan, perlengkapan jenazah, Thafara, fardhu kifayah, paket kafan">
+<meta name="author" content="Thafara Indonesia">
+
+<meta property="og:title" content="Thafara - Kain Kafan Lengkap">
+<meta property="og:description" content="Paket kain kafan lengkap, bersih, dan siap pakai sesuai syariat Islam.">
+
 <style>
 *{box-sizing:border-box}
 
@@ -38,12 +45,12 @@ body{
 .hero{
   background:linear-gradient(135deg,#16a34a,#22c55e);
   color:white;
-  padding:70px 20px;
   text-align:center;
+  padding:80px 20px;
 }
 
 .hero h1{
-  font-size:40px;
+  font-size:42px;
   margin:0;
 }
 
@@ -53,6 +60,7 @@ body{
   opacity:0.9;
 }
 
+/* BUTTON */
 .btn{
   display:inline-block;
   margin-top:15px;
@@ -65,9 +73,14 @@ body{
 
 .btn:hover{transform:scale(1.05)}
 
-.white-btn{
+.white{
   background:white;
   color:#16a34a;
+}
+
+.cta{
+  background:#16a34a;
+  color:white;
 }
 
 /* SECTION */
@@ -86,7 +99,7 @@ section{
   box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
 
-/* PRODUCT GRID */
+/* GRID GAMBAR */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -101,33 +114,42 @@ section{
   border-radius:12px;
 }
 
-/* PRICE BOX */
-.price{
+/* BOX */
+.box{
   background:#f1f5f9;
-  padding:18px;
+  padding:15px;
   border-radius:12px;
   margin:10px;
 }
 
-/* TESTIMONI */
-.testi{
+/* FEATURES */
+.features{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:12px;
   margin-top:20px;
 }
 
-.box{
-  background:#fff;
+.feature{
+  background:white;
   padding:15px;
   border-radius:12px;
   box-shadow:0 10px 20px rgba(0,0,0,0.05);
 }
 
-/* CTA BUTTON */
-.cta{
+/* FLOAT WA */
+.float-wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
   background:#16a34a;
   color:white;
+  padding:15px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  z-index:999;
 }
 
 /* TEXT */
@@ -143,16 +165,17 @@ p{line-height:1.6}
 <div class="nav">
   <a href="#home">Home</a>
   <a href="#produk">Produk</a>
-  <a href="#reseller">Reseller</a>
-  <a href="#testi">Testimoni</a>
+  <a href="#keunggulan">Keunggulan</a>
+  <a href="#cara">Cara Order</a>
 </div>
 
 <!-- HERO -->
 <div class="hero" id="home">
   <h1>THAFARA</h1>
-  <p>Kain Kafan Lengkap & Perlengkapan Jenazah Siap Pakai. Bersih, cepat, dan sesuai fardhu kifayah.</p>
+  <p>Kain Kafan Lengkap & Perlengkapan Jenazah Siap Pakai</p>
 
-  <a class="btn white-btn" href="https://wa.me/6285752208934">
+  <a class="btn white"
+     href="https://wa.me/6285752208934?text=Halo%20saya%20mau%20pesan%20Thafara%20paket%20kain%20kafan">
     👉 Pesan Sekarang
   </a>
 </div>
@@ -161,7 +184,7 @@ p{line-height:1.6}
 <section id="produk">
 <div class="card">
 
-  <h2>Paket Kain Kafan Lengkap</h2>
+  <h2>Paket Produk Thafara</h2>
 
   <div class="grid">
     <img src="produk11.jpg.jpeg">
@@ -172,58 +195,72 @@ p{line-height:1.6}
     <img src="produk16.jpg.jpeg">
   </div>
 
-  <p>Paket lengkap siap pakai untuk kebutuhan fardhu kifayah.</p>
+  <div class="box">👩 Paket Perempuan — Rp 650.000</div>
+  <div class="box">👨 Paket Laki-laki — Rp 630.000</div>
 
-  <h2>Harga Paket</h2>
-
-  <div class="price">👩 Perempuan — <b style="color:#16a34a;">Rp 650.000</b></div>
-  <div class="price">👨 Laki-laki — <b style="color:#2563eb;">Rp 630.000</b></div>
-
-  <a class="btn cta" href="https://wa.me/6285752208934">
-    👉 Order via WhatsApp
+  <a class="btn cta"
+     href="https://wa.me/6285752208934?text=Halo%20saya%20mau%20order%20Thafara">
+    👉 Order WhatsApp
   </a>
 
 </div>
 </section>
 
-<!-- RESELLER -->
-<section id="reseller">
+<!-- KEUNGGULAN -->
+<section id="keunggulan">
 <div class="card">
 
-  <h2>Program Reseller</h2>
-  <p>Peluang usaha stabil karena kebutuhan selalu ada di masyarakat.</p>
+  <h2>Kenapa Pilih Thafara?</h2>
 
-  <a class="btn cta" href="https://wa.me/6285752208934?text=Saya%20ingin%20jadi%20reseller">
-    👉 Gabung Reseller
-  </a>
-
-</div>
-</section>
-
-<!-- TESTIMONI -->
-<section id="testi">
-<div class="card">
-
-  <h2>Testimoni</h2>
-
-  <div class="testi">
-
-    <div class="box">
-      "Produk lengkap dan sangat membantu saat dibutuhkan."
-    </div>
-
-    <div class="box">
-      "Respon cepat, sangat direkomendasikan."
-    </div>
-
-    <div class="box">
-      "Kualitas kain bagus dan bersih."
-    </div>
-
+  <div class="features">
+    <div class="feature">✔ Siap pakai</div>
+    <div class="feature">✔ Sesuai syariat</div>
+    <div class="feature">✔ Bersih & rapi</div>
+    <div class="feature">✔ Pengiriman cepat</div>
   </div>
 
 </div>
 </section>
+
+<!-- BUKTI SOSIAL -->
+<section>
+<div class="card">
+
+  <h2>Sudah Digunakan Oleh</h2>
+
+  <div class="features">
+    <div class="feature">🏥 Masjid & Mushola</div>
+    <div class="feature">👨‍👩‍👧 Keluarga Muslim</div>
+    <div class="feature">🤝 Komunitas Fardhu Kifayah</div>
+  </div>
+
+</div>
+</section>
+
+<!-- CARA ORDER -->
+<section id="cara">
+<div class="card">
+
+  <h2>Cara Order</h2>
+
+  <div class="box">1. Klik tombol WhatsApp</div>
+  <div class="box">2. Kirim pesan</div>
+  <div class="box">3. Konfirmasi alamat</div>
+  <div class="box">4. Barang dikirim</div>
+
+  <a class="btn cta"
+     href="https://wa.me/6285752208934">
+    👉 Mulai Order
+  </a>
+
+</div>
+</section>
+
+<!-- FLOAT WA -->
+<a class="float-wa"
+   href="https://wa.me/6285752208934">
+💬 Chat
+</a>
 
 </body>
 </html>
