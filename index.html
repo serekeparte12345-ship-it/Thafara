@@ -16,6 +16,7 @@ body{
   font-family:Arial;
   background:#f5f7fb;
   color:#111827;
+  scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -41,41 +42,84 @@ body{
   background:linear-gradient(135deg,#16a34a,#22c55e);
   color:white;
   text-align:center;
-  padding:80px 20px;
+  padding:90px 20px;
+  animation:fadeDown 1s ease;
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:44px;
   margin:0;
+  letter-spacing:2px;
 }
 
 .hero p{
   max-width:700px;
   margin:10px auto;
   opacity:0.9;
+  font-size:18px;
 }
 
-/* BUTTON */
+/* ANIMATION */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pop{
+  0%{transform:scale(0.95); opacity:0;}
+  100%{transform:scale(1); opacity:1;}
+}
+
+/* BUTTON PREMIUM */
 .btn{
   display:inline-block;
   margin-top:15px;
   padding:14px 22px;
-  border-radius:10px;
+  border-radius:12px;
   text-decoration:none;
   font-weight:bold;
   transition:0.3s;
+  position:relative;
+  overflow:hidden;
 }
 
-.btn:hover{transform:scale(1.05)}
+/* SHINE EFFECT */
+.btn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transition:0.5s;
+}
+
+.btn:hover::after{
+  left:100%;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* PREMIUM COLORS */
+.cta{
+  background:linear-gradient(135deg,#16a34a,#22c55e);
+  color:white;
+  box-shadow:0 10px 20px rgba(22,163,74,0.3);
+}
+
+.shopee{
+  background:linear-gradient(135deg,#ff3b30,#ff6b6b);
+  color:white;
+  box-shadow:0 10px 20px rgba(255,59,48,0.3);
+}
 
 .white{
   background:white;
   color:#16a34a;
-}
-
-.cta{
-  background:#16a34a;
-  color:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* SECTION */
@@ -92,6 +136,7 @@ section{
   padding:25px;
   border-radius:18px;
   box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  animation:pop 0.6s ease;
 }
 
 /* GRID GAMBAR */
@@ -107,6 +152,11 @@ section{
   height:200px;
   object-fit:cover;
   border-radius:12px;
+  transition:0.3s;
+}
+
+.grid img:hover{
+  transform:scale(1.03);
 }
 
 /* BOX */
@@ -115,6 +165,11 @@ section{
   padding:15px;
   border-radius:12px;
   margin:10px;
+  transition:0.3s;
+}
+
+.box:hover{
+  transform:translateY(-3px);
 }
 
 /* FEATURES */
@@ -130,6 +185,11 @@ section{
   padding:15px;
   border-radius:12px;
   box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.feature:hover{
+  transform:translateY(-5px);
 }
 
 /* FLOAT WA */
@@ -145,9 +205,10 @@ section{
   font-weight:bold;
   box-shadow:0 10px 20px rgba(0,0,0,0.2);
   z-index:999;
+  animation:pop 1s ease;
 }
 
-/* MAPS */
+/* MAP */
 .map{
   width:100%;
   height:300px;
@@ -178,8 +239,7 @@ p{line-height:1.6}
   <h1>THAFARA</h1>
   <p>Kain Kafan Lengkap & Perlengkapan Jenazah Siap Pakai</p>
 
-  <a class="btn white"
-     href="https://wa.me/6285752208934?text=Halo%20saya%20mau%20pesan%20Thafara">
+  <a class="btn white" href="https://wa.me/6285752208934?text=Halo%20saya%20mau%20pesan%20Thafara">
     👉 Pesan Sekarang
   </a>
 </div>
@@ -202,15 +262,17 @@ p{line-height:1.6}
   <div class="box">👩 Paket Perempuan — Rp 650.000</div>
   <div class="box">👨 Paket Laki-laki — Rp 630.000</div>
 
+  <!-- BUTTONS PREMIUM -->
   <a class="btn cta"
      href="https://wa.me/6285752208934?text=Halo%20saya%20mau%20order%20Thafara">
-    👉 Order WhatsApp
+    ⚡ Order Cepat WhatsApp
   </a>
 
-  <a class="btn"
+  <br>
+
+  <a class="btn shopee"
      href="https://id.shp.ee/ceqrooAD"
-     target="_blank"
-     style="background:#ef4444; color:white; display:inline-block; margin-top:10px;">
+     target="_blank">
     🛒 Beli di Shopee
   </a>
 
@@ -270,13 +332,6 @@ p{line-height:1.6}
     class="map"
     src="https://www.google.com/maps?q=HtiU5xhVNah5xpyC7&output=embed">
   </iframe>
-
-  <a class="btn white"
-     href="https://maps.app.goo.gl/HtiU5xhVNah5xpyC7"
-     target="_blank"
-     style="margin-top:10px; display:inline-block;">
-    📍 Buka di Google Maps
-  </a>
 
 </div>
 </section>
