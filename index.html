@@ -8,9 +8,17 @@
 
 <meta name="description" content="KAFARA menyediakan kain kafan lengkap dan perlengkapan jenazah siap pakai sesuai syariat Islam.">
 
-<meta name="keywords" content="kain kafan lengkap, perlengkapan jenazah, fardhu kifayah, paket kafan siap pakai">
+<meta name="keywords" content="kain kafan lengkap, perlengkapan jenazah, fardhu kifayah, paket kafan">
 
 <style>
+html{
+  scroll-behavior:smooth;
+}
+
+section{
+  scroll-margin-top:80px;
+}
+
 body{
   margin:0;
   font-family:system-ui, Arial;
@@ -18,6 +26,7 @@ body{
   color:#0f172a;
 }
 
+/* NAV */
 .nav{
   position:sticky;
   top:0;
@@ -37,6 +46,7 @@ body{
   font-size:14px;
 }
 
+/* HERO */
 .hero{
   padding:80px 20px;
   text-align:center;
@@ -55,8 +65,18 @@ body{
   line-height:1.7;
 }
 
+img{
+  width:100%;
+  height:180px;
+  object-fit:contain;
+  background:#f8fafc;
+  border-radius:14px;
+  padding:8px;
+}
+
+/* SECTION */
 .section{
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
 }
 
@@ -64,7 +84,7 @@ body{
   background:white;
   max-width:1000px;
   margin:auto;
-  padding:28px;
+  padding:30px;
   border-radius:20px;
   box-shadow:0 20px 50px rgba(0,0,0,0.08);
 }
@@ -79,16 +99,6 @@ p{color:#475569;line-height:1.8;}
   margin-top:20px;
 }
 
-/* 🔥 FIX GAMBAR TIDAK KE POTONG */
-img{
-  width:100%;
-  height:180px;
-  object-fit:contain;
-  background:#f8fafc;
-  border-radius:14px;
-  padding:8px;
-}
-
 .btn{
   display:inline-block;
   padding:14px 22px;
@@ -100,22 +110,6 @@ img{
 }
 
 .green{background:#16a34a;}
-.blue{background:#2563eb;}
-
-.highlight{
-  background:#f1f5f9;
-  padding:20px;
-  border-radius:14px;
-  text-align:left;
-  line-height:1.9;
-}
-
-.article{
-  text-align:left;
-  max-width:800px;
-  margin:auto;
-  line-height:1.9;
-}
 
 .badge{
   display:inline-block;
@@ -126,6 +120,24 @@ img{
   font-size:12px;
   margin-bottom:10px;
 }
+
+/* ARTICLE FIX */
+.article{
+  text-align:left;
+  max-width:900px;
+  margin:auto;
+  line-height:1.9;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.article h3{
+  margin-top:20px;
+  color:#0f172a;
+}
+
 </style>
 </head>
 
@@ -135,7 +147,6 @@ img{
 <div class="nav">
   <a href="#home">Home</a>
   <a href="#produk">Produk</a>
-  <a href="#keunggulan">Keunggulan</a>
   <a href="#artikel">Artikel</a>
 </div>
 
@@ -145,8 +156,7 @@ img{
   <h1>KAFARA</h1>
 
   <p>
-    Kain Kafan lengkap & perlengkapan jenazah siap pakai sesuai syariat Islam.
-    Dirancang untuk kebutuhan fardhu kifayah masjid & keluarga muslim.
+    Kain kafan lengkap & perlengkapan jenazah siap pakai sesuai syariat Islam.
   </p>
 
   <img src="produc1.jpg.png">
@@ -161,8 +171,9 @@ img{
 <section id="produk" class="section">
 <div class="card">
 
-  <span class="badge">Galeri Produk</span>
-  <h2>Produk KAFARA</h2>
+  <span class="badge">Produk Lengkap</span>
+
+  <h2>KAFARA Gallery</h2>
 
   <div class="grid">
     <img src="produc1.jpg.png">
@@ -176,49 +187,31 @@ img{
 </div>
 </section>
 
-<!-- KEUNGGULAN -->
-<section id="keunggulan" class="section">
-<div class="card">
-
-  <span class="badge">Kenapa KAFARA</span>
-  <h2>Keunggulan Produk</h2>
-
-  <div class="highlight">
-
-    ✔ Paket lengkap siap pakai<br>
-    ✔ Sesuai kebutuhan fardhu kifayah<br>
-    ✔ Higienis & dikemas rapi<br>
-    ✔ Siap kirim cepat<br>
-    ✔ Cocok untuk masjid & keluarga muslim<br>
-
-  </div>
-
-  <a class="btn green" href="https://wa.me/6285752208934">
-    👉 Konsultasi / Order
-  </a>
-
-</div>
-</section>
-
-<!-- ARTIKEL -->
+<!-- ARTIKEL FIX (NO BLANK LAGI) -->
 <section id="artikel" class="section">
-<div class="card article">
+
+<div class="article">
 
   <h2>Artikel Edukasi KAFARA</h2>
 
+  <p>
+    KAFARA hadir menyediakan perlengkapan pemulasaraan jenazah lengkap sesuai syariat Islam untuk membantu kebutuhan fardhu kifayah di masyarakat.
+  </p>
+
   <h3>Apa itu kain kafan?</h3>
-  <p>Kain kafan adalah kain untuk membungkus jenazah sesuai syariat Islam.</p>
+  <p>Kain kafan adalah kain yang digunakan untuk membungkus jenazah sesuai syariat Islam.</p>
 
   <h3>Perlengkapan jenazah</h3>
-  <p>Meliputi kain kafan, kapas, dan perlengkapan pembersihan jenazah.</p>
+  <p>Meliputi kain kafan, kapas, sabun, dan perlengkapan pembersihan jenazah.</p>
 
   <h3>Kenapa harus siap?</h3>
-  <p>Karena kematian datang tanpa pemberitahuan.</p>
+  <p>Kematian tidak dapat diprediksi sehingga perlu kesiapan sejak dini.</p>
 
   <h3>Peluang reseller</h3>
-  <p>Permintaan stabil di masjid dan komunitas muslim.</p>
+  <p>Produk ini memiliki permintaan stabil di masjid dan komunitas muslim.</p>
 
 </div>
+
 </section>
 
 </body>
