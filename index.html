@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Thafara - Katalog Kain Kafan</title>
+<title>Thafara Marketplace - Kain Kafan Lengkap</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,24 +14,46 @@ body{
   color:#111827;
 }
 
+/* TOP BAR */
+.topbar{
+  background:#16a34a;
+  color:white;
+  padding:12px;
+  text-align:center;
+  font-weight:bold;
+}
+
 /* HEADER */
 .header{
-  background:linear-gradient(135deg,#16a34a,#22c55e);
-  color:white;
-  text-align:center;
-  padding:60px 20px;
+  background:white;
+  padding:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:10;
 }
 
 .header h1{
   margin:0;
-  font-size:40px;
+  font-size:26px;
 }
 
-.header p{
-  opacity:0.9;
+/* SEARCH BAR */
+.search{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
 }
 
-/* GRID CATALOG */
+.search input{
+  width:90%;
+  max-width:500px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+/* GRID */
 .container{
   max-width:1100px;
   margin:auto;
@@ -40,7 +62,7 @@ body{
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:15px;
 }
 
@@ -54,7 +76,7 @@ body{
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
 .card img{
@@ -68,10 +90,9 @@ body{
 }
 
 .price{
-  font-weight:bold;
   color:#16a34a;
+  font-weight:bold;
   font-size:18px;
-  margin:5px 0;
 }
 
 /* BUTTONS */
@@ -106,145 +127,161 @@ body{
   margin:30px 0;
 }
 
+/* MAP */
+.map{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:12px;
+}
+
+/* FOOTER */
+.footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <h1>THAFARA</h1>
-  <p>Katalog Kain Kafan Lengkap & Siap Pakai</p>
+<!-- TOP BAR -->
+<div class="topbar">
+  ⚡ Thafara Marketplace - Kain Kafan Lengkap & Siap Pakai
 </div>
 
+<!-- HEADER -->
+<div class="header">
+  <h1>THAFARA STORE</h1>
+
+  <div class="search">
+    <input type="text" placeholder="Cari paket kain kafan...">
+  </div>
+</div>
+
+<!-- PRODUCTS -->
 <div class="container">
 
-  <h2 class="title">🛍️ Katalog Produk</h2>
+<h2 class="title">🛍️ Katalog Produk Premium</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <!-- PRODUCT 1 -->
-    <div class="card">
-      <img src="produk11.jpg.jpeg">
-      <div class="content">
-        <h3>Paket Perempuan</h3>
-        <div class="price">Rp 650.000</div>
+<!-- 1 -->
+<div class="card">
+  <img src="produk11.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Perempuan</h3>
+    <div class="price">Rp 650.000</div>
 
-        <a class="btn wa"
-           href="https://wa.me/6285752208934?text=Saya%20mau%20order%20Paket%20Perempuan%20Thafara">
-          💬 WhatsApp
-        </a>
+    <a class="btn wa"
+       href="https://wa.me/6285752208934?text=Saya%20mau%20order%20Paket%20Perempuan">
+      💬 WhatsApp
+    </a>
 
-        <a class="btn shopee"
-           href="https://id.shp.ee/ceqrooAD"
-           target="_blank">
-          🛒 Shopee
-        </a>
-      </div>
-    </div>
-
-    <!-- PRODUCT 2 -->
-    <div class="card">
-      <img src="produk12.jpg.jpeg">
-      <div class="content">
-        <h3>Paket Laki-laki</h3>
-        <div class="price">Rp 630.000</div>
-
-        <a class="btn wa"
-           href="https://wa.me/6285752208934?text=Saya%20mau%20order%20Paket%20Laki-laki%20Thafara">
-          💬 WhatsApp
-        </a>
-
-        <a class="btn shopee"
-           href="https://id.shp.ee/ceqrooAD"
-           target="_blank">
-          🛒 Shopee
-        </a>
-      </div>
-    </div>
-
-    <!-- PRODUCT 3 -->
-    <div class="card">
-      <img src="produk13.jpg.jpeg">
-      <div class="content">
-        <h3>Paket Standar</h3>
-        <div class="price">Rp 600.000</div>
-
-        <a class="btn wa"
-           href="https://wa.me/6285752208934">
-          💬 WhatsApp
-        </a>
-
-        <a class="btn shopee"
-           href="https://id.shp.ee/ceqrooAD"
-           target="_blank">
-          🛒 Shopee
-        </a>
-      </div>
-    </div>
-
-    <!-- PRODUCT 4 -->
-    <div class="card">
-      <img src="produk14.jpg.jpeg">
-      <div class="content">
-        <h3>Paket Lengkap Premium</h3>
-        <div class="price">Rp 700.000</div>
-
-        <a class="btn wa"
-           href="https://wa.me/6285752208934">
-          💬 WhatsApp
-        </a>
-
-        <a class="btn shopee"
-           href="https://id.shp.ee/ceqrooAD"
-           target="_blank">
-          🛒 Shopee
-        </a>
-      </div>
-    </div>
-
-    <!-- PRODUCT 5 -->
-    <div class="card">
-      <img src="produk15.jpg.jpeg">
-      <div class="content">
-        <h3>Paket Masjid</h3>
-        <div class="price">Rp 750.000</div>
-
-        <a class="btn wa"
-           href="https://wa.me/6285752208934">
-          💬 WhatsApp
-        </a>
-
-        <a class="btn shopee"
-           href="https://id.shp.ee/ceqrooAD"
-           target="_blank">
-          🛒 Shopee
-        </a>
-      </div>
-    </div>
-
-    <!-- PRODUCT 6 -->
-    <div class="card">
-      <img src="produk16.jpg.jpeg">
-      <div class="content">
-        <h3>Paket Darurat</h3>
-        <div class="price">Rp 580.000</div>
-
-        <a class="btn wa"
-           href="https://wa.me/6285752208934">
-          💬 WhatsApp
-        </a>
-
-        <a class="btn shopee"
-           href="https://id.shp.ee/ceqrooAD"
-           target="_blank">
-          🛒 Shopee
-        </a>
-      </div>
-    </div>
-
+    <a class="btn shopee"
+       href="https://id.shp.ee/ceqrooAD"
+       target="_blank">
+      🛒 Shopee
+    </a>
   </div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+  <img src="produk12.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Laki-laki</h3>
+    <div class="price">Rp 630.000</div>
+
+    <a class="btn wa"
+       href="https://wa.me/6285752208934">
+      💬 WhatsApp
+    </a>
+
+    <a class="btn shopee"
+       href="https://id.shp.ee/ceqrooAD"
+       target="_blank">
+      🛒 Shopee
+    </a>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <img src="produk13.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Standar</h3>
+    <div class="price">Rp 600.000</div>
+
+    <a class="btn wa"
+       href="https://wa.me/6285752208934">
+      💬 WhatsApp
+    </a>
+
+    <a class="btn shopee"
+       href="https://id.shp.ee/ceqrooAD"
+       target="_blank">
+      🛒 Shopee
+    </a>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <img src="produk14.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Premium</h3>
+    <div class="price">Rp 700.000</div>
+
+    <a class="btn wa" href="https://wa.me/6285752208934">💬 WhatsApp</a>
+    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">🛒 Shopee</a>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <img src="produk15.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Masjid</h3>
+    <div class="price">Rp 750.000</div>
+
+    <a class="btn wa" href="https://wa.me/6285752208934">💬 WhatsApp</a>
+    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">🛒 Shopee</a>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+  <img src="produk16.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Darurat</h3>
+    <div class="price">Rp 580.000</div>
+
+    <a class="btn wa" href="https://wa.me/6285752208934">💬 WhatsApp</a>
+    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">🛒 Shopee</a>
+  </div>
+</div>
+
+</div>
+
+<!-- MAPS -->
+<h2 class="title">📍 Lokasi Kami</h2>
+
+<iframe
+  class="map"
+  src="https://www.google.com/maps?q=HtiU5xhVNah5xpyC7&output=embed">
+</iframe>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © Thafara Marketplace - Kain Kafan Lengkap
 </div>
 
 </body>
