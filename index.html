@@ -131,10 +131,10 @@
 
   <!-- NAV -->
   <div class="nav">
-    <button class="active" onclick="showPage('home')">Home</button>
-    <button onclick="showPage('produk')">Produk</button>
-    <button onclick="showPage('reseller')">Reseller</button>
-    <button onclick="showPage('maps')">Maps</button>
+   <button class="active" onclick="showPage('home', this)">Home</button>
+<button onclick="showPage('produk', this)">Produk</button>
+<button onclick="showPage('reseller', this)">Reseller</button>
+<button onclick="showPage('maps', this)">Maps</button>
   </div>
 
   <!-- HOME -->
@@ -379,7 +379,7 @@ THAFARA adalah merek yang khusus menyediakan perlengkapan pemulasaraan jenazah y
   </div>
 
  <script>
-function showPage(page){
+function showPage(page, btn){
 
   let pages = document.querySelectorAll('.page');
   pages.forEach(p=>p.classList.remove('active'));
@@ -389,7 +389,7 @@ function showPage(page){
   let btns = document.querySelectorAll('.nav button');
   btns.forEach(b=>b.classList.remove('active'));
 
-  event.target.classList.add('active');
+  btn.classList.add('active');
 }
 
 function toggleDesc(el){
@@ -402,6 +402,5 @@ function toggleDesc(el){
   }
 }
 </script>
-
 </body>
 </html>
